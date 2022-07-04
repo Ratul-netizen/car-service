@@ -1,5 +1,5 @@
 <?php
-   $title = "Advance Auto Parts"; 
+   $title = "Rapid Auto"; 
    include ('header.php') ;
   ?>
 <script type="text/javascript" src="js/count.js"></script>
@@ -24,12 +24,6 @@
     </div>
 
 </header>
-
-
-
-
-
-
 
 
 
