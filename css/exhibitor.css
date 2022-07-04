@@ -1,0 +1,294 @@
+.exhibitors {
+  padding: 185px 0;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .exhibitors {
+    padding: 100px 0 50px;
+  }
+}
+
+.exhibitors:after {
+  content: '';
+  background-color: #fbfbf8;
+  -webkit-transform: skew(0, -4deg);
+          transform: skew(0, -4deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.exhibitors-filter {
+  color: #4a4a4a;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+
+.exhibitors-filter input,
+.exhibitors-filter select {
+  border: none;
+  border-radius: 25px;
+  font-size: 17px;
+  height: 50px;
+  padding: 5px 30px;
+}
+
+.exhibitors-filter input::-webkit-input-placeholder,
+.exhibitors-filter select::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+.exhibitors-filter input::-moz-placeholder,
+.exhibitors-filter select::-moz-placeholder {
+  opacity: .5;
+}
+
+.exhibitors-filter input::-ms-input-placeholder,
+.exhibitors-filter select::-ms-input-placeholder {
+  opacity: .5;
+}
+
+.exhibitors-filter input::placeholder,
+.exhibitors-filter select::placeholder {
+  opacity: .5;
+}
+
+.exhibitors-filter input {
+  padding-right: 50px;
+}
+
+@media (min-width: 576px) {
+  .exhibitors-filter input {
+    min-width: 460px;
+  }
+}
+
+@media (min-width: 768px) {
+  .exhibitors-filter select {
+    min-width: 210px;
+  }
+}
+
+.exhibitors-filter label {
+  font-family: "HelveticaNeue-Medium", Arial, sans-serif;
+  font-size: 17px;
+}
+
+@media (max-width: 767.98px) {
+  .exhibitors-filter label {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+.exhibitors-filter > * + * {
+  margin-left: 20px;
+}
+
+@media (max-width: 1199.98px) {
+  .exhibitors-filter > * + * {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .exhibitors-filter .filter-name {
+    width: 100%;
+  }
+}
+
+.exhibitors-filter .filter-name > div {
+  display: inline-block;
+  position: relative;
+}
+
+.exhibitors-filter .filter-name > div::after {
+  content: url(../https://static-hotsites.edufindme.com/tsw-events/06c5172b2616c16d6e10f04f4428299c3f2b2229/img/icon-search.svg);
+  height: 20px;
+  opacity: .2;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 20px;
+}
+
+.exhibitors-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.exhibitors-tabs .exhibitor-tab {
+  cursor: pointer;
+  font-size: .75rem;
+  padding: 5px;
+}
+
+.exhibitors-tabs .exhibitor-tab:hover .content {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 0 0 75px 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 75px 0 rgba(0, 0, 0, 0.35);
+}
+
+.exhibitors-tabs .exhibitor-tab .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.exhibitors-tabs .exhibitor-tab .content:before {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.exhibitors-tabs .exhibitor-tab.open .content {
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.exhibitors-tabs .exhibitor-tab.open .content::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 26px;
+  height: 16px;
+  background: transparent url(https://static-hotsites.edufindme.com/tsw-events/06c5172b2616c16d6e10f04f4428299c3f2b2229/img/icon-exhibitor-open.png) center no-repeat;
+  background-size: 26px 16px;
+  opacity: 1;
+}
+
+.exhibitors-tabs .exhibitor-tab.open .content::after {
+  content: '';
+  background-color: #ffffff;
+  bottom: -10px;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.exhibitors-tabs .exhibitor-tab {
+  max-width: 155px;
+  max-height: 155px;
+  min-width: 155px;
+  min-height: 155px;
+}
+
+.exhibitors .exhibitor-details {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: padding 0.1s ease-in-out;
+  transition: padding 0.1s ease-in-out;
+}
+
+.exhibitors .exhibitor-details .exhibitor-details-content {
+  padding: 0 80px;
+}
+
+@media (max-width: 767.98px) {
+  .exhibitors .exhibitor-details .exhibitor-details-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .exhibitors .exhibitor-details .exhibitor-details-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.exhibitors .exhibitor-details.loaded {
+  padding: 75px 0;
+}
+
+.exhibitors .exhibitor-details-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+}
+
+.exhibitors .exhibitor-details-info {
+  color: #2b2b2b;
+  padding-right: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .exhibitors .exhibitor-details-info {
+    padding-right: 0;
+    padding-top: 30px;
+  }
+}
+
+.exhibitors .exhibitor-details.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 767.98px) {
+  .exhibitors .exhibitor-details .video {
+    margin-top: 50px;
+  }
+}
+
+.exhibitors .exhibitor-details .name {
+  color: #000000;
+  font-family: "HelveticaNeue-Bold", Arial, sans-serif;
+  font-size: 2.1875rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.exhibitors .exhibitor-details .courses span {
+  font-family: "HelveticaNeue-Bold", Arial, sans-serif;
+}
+
+.exhibitors .exhibitor-details .description {
+  font-size: 1rem;
+}}

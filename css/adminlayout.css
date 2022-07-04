@@ -1,0 +1,63 @@
+.adminlay{
+	background-color: white;
+	color: #01bacf;
+}
+.adminlay:hover{
+	color: black;
+}
+.adminlays{
+	background-color: #01bacf;
+	color: black;
+}
+.adminlays:hover{
+	color: black;
+}
+
+.moving{
+	display: inline-block;
+   	width: 50%;
+   	border: 1px solid grey;
+   	float: right;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+  overflow: hidden;
+  
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.sidenav a:hover {
+  color: #01bacf;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
